@@ -3,7 +3,7 @@
 var express = require('express');
 var app = express();
 var mongojs = require('mongojs');
-var db = mongojs('contactlist', ['contactlist']);
+var db = mongojs('mongodb://heroku_c9zqv2k4:c9pfsb0oofp5m22fdum48j7jl7@ds063892.mongolab.com:63892/heroku_c9zqv2k4', ['contactlist']);
 var bodyParser = require('body-parser');
 console.log(__dirname);
 app.use(express.static(__dirname + '/public'));
